@@ -4,6 +4,9 @@ import backend.challenge.masglobal.facade.impl.MasGlobalTestApiFacadeImpl;
 import backend.challenge.masglobal.facade.model.Employee;
 import backend.challenge.masglobal.service.EmployeeDTO;
 import backend.challenge.masglobal.service.factory.CalculateAnnualSalaryStrategyFactory;
+import backend.challenge.masglobal.service.strategy.impl.HourlySalaryContractImpl;
+import backend.challenge.masglobal.service.strategy.impl.MonthlySalaryContractImpl;
+import backend.challenge.masglobal.utils.Constants;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,10 +19,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -52,6 +52,8 @@ public class EmployeeServiceImplTest {
         employee.setRoleId(1);
         employee.setRoleName("Role Name");
         employee.setRoleDescription("Role Description");
+        Mockito.when(factory.getStrategy(Constants.SALARY_TYPE_HOURLY)).thenReturn(new HourlySalaryContractImpl());
+        Mockito.when(factory.getStrategy(Constants.SALARY_TYPE_MONTHLY)).thenReturn(new MonthlySalaryContractImpl());
     }
 
     @Test
@@ -60,12 +62,10 @@ public class EmployeeServiceImplTest {
         List<Employee> employees = new ArrayList<>();
         employees.add(employee);
 
-        Mockito.when(factory.getStrategy(employee)).thenCallRealMethod();
         Mockito.when(facade.getEmployees()).thenReturn(employees);
         List<EmployeeDTO> employeesDtosList = employeeService.getEmployeesWithAnnualSalary();
         assertNotNull(employeesDtosList);
         assertEquals(1, employeesDtosList.size());
-
 
         EmployeeDTO dto = employeesDtosList.get(0);
         assertEquals(employee.getId(), dto.getId());
@@ -85,7 +85,6 @@ public class EmployeeServiceImplTest {
         List<Employee> employees = new ArrayList<>();
         employees.add(employee);
 
-        Mockito.when(factory.getStrategy(employee)).thenCallRealMethod();
         Mockito.when(facade.getEmployees()).thenReturn(employees);
         List<EmployeeDTO> employeesDtosList = employeeService.getEmployeesWithAnnualSalary();
         assertNotNull(employeesDtosList);
@@ -118,7 +117,6 @@ public class EmployeeServiceImplTest {
         List<Employee> employees = new ArrayList<>();
         employees.add(employee);
 
-        Mockito.when(factory.getStrategy(employee)).thenCallRealMethod();
         Mockito.when(facade.getEmployees()).thenReturn(employees);
         List<EmployeeDTO> employeesDtosList = employeeService.getEmployeesWithAnnualSalary(Arrays.asList(1));
         assertNotNull(employeesDtosList);
@@ -143,17 +141,13 @@ public class EmployeeServiceImplTest {
         List<Employee> employees = new ArrayList<>();
         employees.add(employee);
 
-        Mockito.when(factory.getStrategy(employee)).thenCallRealMethod();
+
         Mockito.when(facade.getEmployees()).thenReturn(employees);
         List<EmployeeDTO> employeesDtosList = employeeService.getEmployeesWithAnnualSalary(Arrays.asList(10));
         assertNotNull(employeesDtosList);
         assertEquals(0, employeesDtosList.size());
 
     }
-
-
-
-
 
 
 }

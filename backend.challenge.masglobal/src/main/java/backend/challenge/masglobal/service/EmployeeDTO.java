@@ -48,6 +48,6 @@ public class EmployeeDTO {
         this.monthlySalary = e.getMonthlySalary();
     }
     public void calculateAnnualSalary(ICalculateAnnualSalaryStrategy strategy){
-            setAnnualSalary(strategy.calculateAnnualSalary());
+            setAnnualSalary(strategy.calculateAnnualSalary(this));
     }
 }

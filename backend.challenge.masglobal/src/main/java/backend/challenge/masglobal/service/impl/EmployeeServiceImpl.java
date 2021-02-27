@@ -31,7 +31,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
     public List<EmployeeDTO> getEmployeesWithAnnualSalary() {
         List<EmployeeDTO> employeesList = new ArrayList<>();
         facade.getEmployees().forEach(emp -> {
-            ICalculateAnnualSalaryStrategy strategy = strategyFactory.getStrategy(emp);
+            ICalculateAnnualSalaryStrategy strategy = strategyFactory.getStrategy(emp.getContractTypeName());
             EmployeeDTO dto = new EmployeeDTO(emp);
             dto.calculateAnnualSalary(strategy);
             employeesList.add(dto);
