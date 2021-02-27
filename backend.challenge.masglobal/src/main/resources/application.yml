@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: default
+
+server:
+  port: 8989
+  servlet:
+    context-path: /backend.challenge.masglobal/
+
+project:
+  basePackage: "backend.challenge.masglobal"
+
+masglobal:
+  api:
+    baseUrl: http://masglobaltestapi.azurewebsites.net/api
+    employees: /Employees
