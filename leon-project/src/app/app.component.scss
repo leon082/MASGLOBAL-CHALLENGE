@@ -1,0 +1,9 @@
+.container-fluid {
+    .cus-input {
+        display: flex;
+        flex-direction: row;
+        input {
+            width: 20%;
+        }
+    }
+}

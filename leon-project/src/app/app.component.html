@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="cus-input">
+    <input type="text" class="form-control" id="inputId" name="inputId" [(ngModel)]="inputId" placeholder="Employee id" />
+    <button (click)="getEmployeeById()">
+      Search
+    </button>
+  </div>
+  <div class="container-fluid">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Contract Type Name</th>
+          <th scope="col">Role Id</th>
+          <th scope="col">Role Name</th>
+          <th scope="col">Role Description</th>
+          <th scope="col">Hourly Salary</th>
+          <th scope="col">Monthly Salary</th>
+          <th scope="col">Annual Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of list">
+          <td>{{ item.id }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.contractTypeName  }}</td>
+          <td>{{ item.roleId }}</td>
+          <td>{{ item.roleName }}</td>
+          <td>{{ item.roleDescription }}</td>
+          <td>{{ item.hourlySalary }}</td>
+          <td>{{ item.monthlySalary }}</td>
+          <td>{{ item.annualSalary }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
