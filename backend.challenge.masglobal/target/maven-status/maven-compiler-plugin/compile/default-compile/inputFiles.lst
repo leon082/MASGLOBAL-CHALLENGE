@@ -1,0 +1,14 @@
+D:\Leon\Documents\masGlobalTest\MASGLOBAL-CHALLENGE\backend.challenge.masglobal\src\main\java\backend\challenge\masglobal\config\SwaggerConfiguration.java
+D:\Leon\Documents\masGlobalTest\MASGLOBAL-CHALLENGE\backend.challenge.masglobal\src\main\java\backend\challenge\masglobal\controller\EmployeeController.java
+D:\Leon\Documents\masGlobalTest\MASGLOBAL-CHALLENGE\backend.challenge.masglobal\src\main\java\backend\challenge\masglobal\service\strategy\impl\MonthlySalaryContractImpl.java
+D:\Leon\Documents\masGlobalTest\MASGLOBAL-CHALLENGE\backend.challenge.masglobal\src\main\java\backend\challenge\masglobal\MasGlobalApplication.java
+D:\Leon\Documents\masGlobalTest\MASGLOBAL-CHALLENGE\backend.challenge.masglobal\src\main\java\backend\challenge\masglobal\service\impl\EmployeeServiceImpl.java
+D:\Leon\Documents\masGlobalTest\MASGLOBAL-CHALLENGE\backend.challenge.masglobal\src\main\java\backend\challenge\masglobal\facade\IEmployeeRepositoryFacade.java
+D:\Leon\Documents\masGlobalTest\MASGLOBAL-CHALLENGE\backend.challenge.masglobal\src\main\java\backend\challenge\masglobal\service\factory\CalculateAnnualSalaryStrategyFactory.java
+D:\Leon\Documents\masGlobalTest\MASGLOBAL-CHALLENGE\backend.challenge.masglobal\src\main\java\backend\challenge\masglobal\service\strategy\impl\HourlySalaryContractImpl.java
+D:\Leon\Documents\masGlobalTest\MASGLOBAL-CHALLENGE\backend.challenge.masglobal\src\main\java\backend\challenge\masglobal\service\IEmployeeService.java
+D:\Leon\Documents\masGlobalTest\MASGLOBAL-CHALLENGE\backend.challenge.masglobal\src\main\java\backend\challenge\masglobal\service\EmployeeDTO.java
+D:\Leon\Documents\masGlobalTest\MASGLOBAL-CHALLENGE\backend.challenge.masglobal\src\main\java\backend\challenge\masglobal\utils\Constants.java
+D:\Leon\Documents\masGlobalTest\MASGLOBAL-CHALLENGE\backend.challenge.masglobal\src\main\java\backend\challenge\masglobal\facade\model\Employee.java
+D:\Leon\Documents\masGlobalTest\MASGLOBAL-CHALLENGE\backend.challenge.masglobal\src\main\java\backend\challenge\masglobal\service\strategy\ICalculateAnnualSalaryStrategy.java
+D:\Leon\Documents\masGlobalTest\MASGLOBAL-CHALLENGE\backend.challenge.masglobal\src\main\java\backend\challenge\masglobal\facade\impl\MasGlobalTestApiFacadeImpl.java
